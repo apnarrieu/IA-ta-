@@ -1,6 +1,6 @@
 import numpy as np
 
-#In this first part, we just prepare our data (mnist) 
+#In this first part, we just prepare our data (mnist)
 #for training and testing
 
 import keras
@@ -19,7 +19,7 @@ X_train  = X_train / 255
 X_test  = X_test / 255
 
 
-#We want to have a binary classification: digit 5 is classified 1 and 
+#We want to have a binary classification: digit 5 is classified 1 and
 #all the other digits are classified 0
 
 y_new = np.zeros(y_train.shape)
@@ -35,7 +35,7 @@ y_train = y_train.T
 y_test = y_test.T
 
 
-m = X_train.shape[1] number of examples
+m = X_train.shape[1] #number of examplessource /net/ens/DeepLearning/tensorflow/bin/activate
 
 #Now, we shuffle the training set
 np.random.seed(138)
@@ -43,7 +43,7 @@ shuffle_index = np.random.permutation(m)
 X_train, y_train = X_train[:,shuffle_index], y_train[:,shuffle_index]
 
 
-#Display one image and corresponding label 
+#Display one image and corresponding label
 import matplotlib
 import matplotlib.pyplot as plt
 i = 3
@@ -54,8 +54,7 @@ plt.show()
 
 
 #Let start our work: creating a neural network
-#First, we just use a single neuron. 
+#First, we just use a single neuron.
 
 
 #####TO COMPLETE
-
